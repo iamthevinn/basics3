@@ -52,4 +52,31 @@ console.log(how_many_even([2,3,5])); // 1
 console.log(how_many_even([2,4,-6])); // 3
 console.log();
 
+// Math 4
+function create_dummy_array(n) {
+  let dummyArray = [];
+  for (let i = 0; i < n; i++) {
+    dummyArray.push(Math.floor(Math.random() * 10));
+  }
+  return dummyArray;
+}
+console.log("Start of create_dummy_array Tests");
+console.log(create_dummy_array(0)); // empty array
+console.log(create_dummy_array(1)); // array length 1
+console.log(create_dummy_array(2)); // array length 2
+console.log(create_dummy_array(3)); // array length 3
+console.log(create_dummy_array(4)); // array length 4
+console.log(create_dummy_array(5)); // array length 5
+console.log();
 
+// Math 5
+function random_choice(array) {
+
+}
+console.log("Start of random_choice Tests");
+console.log(random_choice([])); // Array is Empty
+console.log(random_choice([1])); // array length 2
+console.log(random_choice([-1,1])); // array length 3
+console.log(random_choice([-1,0,1])); // array length 4
+console.log(random_choice([-5,1,-3,5,0])); // array length 5
+console.log();
