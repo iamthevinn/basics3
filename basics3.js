@@ -71,12 +71,21 @@ console.log();
 
 // Math 5
 function random_choice(array) {
-
+  if (array.length === 0)
+    return "Array is Empty";
+  
+  if (array.constructor === Array) {
+    let randomNumber = Math.floor(Math.random() * array.length);
+    //console.log("Index Of Array to Return: " + randomNumber);
+    return array[randomNumber];
+  }
+  return "Not a valid datatype. You passed in the type " + array.constructor + ". Only Arrays are allowed.";
 }
 console.log("Start of random_choice Tests");
 console.log(random_choice([])); // Array is Empty
-console.log(random_choice([1])); // array length 2
-console.log(random_choice([-1,1])); // array length 3
-console.log(random_choice([-1,0,1])); // array length 4
-console.log(random_choice([-5,1,-3,5,0])); // array length 5
-console.log();
+console.log(random_choice(1)); // Not a valid type
+console.log(random_choice("string")); // Not a valid type
+console.log(random_choice([1])); // array length 1
+console.log(random_choice([-1,1])); // array length 2
+console.log(random_choice([-1,0,1])); // array length 3
+console.log(random_choice([0,1,2,3,4,5])); // array length 6
