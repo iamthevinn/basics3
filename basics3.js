@@ -34,3 +34,22 @@ console.log(is_even(-1)); // false
 console.log(is_even(-2)); // true
 console.log();
 
+// Math 3
+function how_many_even(array) {
+  let evenTotal = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (is_even(array[i]))
+      evenTotal++;
+  }
+  return evenTotal;
+}
+console.log("Start of how_many_even Tests");
+console.log(how_many_even([2,4,6])); // 3
+console.log(how_many_even([2,3,6])); // 2
+console.log(how_many_even([2,4,5])); // 2
+console.log(how_many_even([1,4,6])); // 2
+console.log(how_many_even([2,3,5])); // 1
+console.log(how_many_even([2,4,-6])); // 3
+console.log();
+
+
