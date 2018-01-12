@@ -8,7 +8,7 @@ function zero_negativity(array) {
       
   return true;
 }
-
+//change
 console.log("Start of zero_negativity Tests");
 console.log(zero_negativity([-1])); // false
 console.log(zero_negativity([])); // true
